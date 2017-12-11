@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">My App1</string>
+
+        <string name="app_name1">Login SignUp UI Fragment</string>
+        <string name="action_settings">Settings</string>
+
+        <string name="email">Email Id</string>
+        <string name="passowrd">Password</string>
+        <string name="login">LOGIN</string>drawables.xml
+        <string name="forgot">Forgot password?</string>
+        <string name="newUser">Not a Member yet? Sign Up here.</string>
+        <string name="fullName">Full Name</string>
+        <string name="mobileNumber">Mobile Number</string>
+        <string name="location">Location</string>
+        <string name="confirmPassword">Confirm Password</string>
+        <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+        <string name="signUp">SIGN UP</string>
+        <string name="already_user">Already have Account? Login here.</string>
+        <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+        <string name="submit">SUBMIT</string>
+        <string name="back">BACK</string>
+
+        <string name="closebutton">Close Button for Activity</string>
+        <string name="navigation_drawer_open">Open navigation drawer</string>
+        <string name="navigation_drawer_close">Close navigation drawer</string>
+        <string name="title_activity_chat">ChatActivity</string>
+        <string name="notice">This is Your Home Page activity after successful login or Signup!</string>
+
+        <string name="error_invalid_email">This email address is invalid</string>
+        <string name="error_invalid_password">This password is too short</string>
+        <string name="error_incorrect_password">This password is incorrect</string>
+        <string name="error_field_required">This field is required</string>
+        <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+        <string name="action_search">Search</string>
+
+        <string name="description">One Line Description</string>
+        <string name="noticeprofile">Profile!</string>
+        <string name="noticefrnds">List of Friends!</string>
+        <string name="noticeaddfrnds">Suggested Friends!</string>
+        <string name="noticehelp">Get Help!</string>
+        <string name="noticesetting">Manage Your Settings!</string>
+        <string name="noticerateus">Feedback and Rate Us!</string>
+
+
+</resources>
