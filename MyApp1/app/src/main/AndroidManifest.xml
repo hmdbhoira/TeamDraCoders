@@ -27,6 +27,14 @@
             android:label="Login"
             android:theme="@style/AppTheme"
              />
+        <activity android:name=".SignUpPublicClass"
+            android:label="Login"
+            android:theme="@style/AppTheme"
+            />
+        <activity android:name=".ButtonRegisterClass"
+            android:label="Login"
+            android:theme="@style/AppTheme"
+            tools:ignore="DuplicateActivity" />
     </application>
 
 </manifest>

@@ -41,7 +41,7 @@ public class LoginClass extends AppCompatActivity {
         regbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentreg = new Intent(LoginClass.this, SignupClass.class);
+                Intent intentreg = new Intent(LoginClass.this, ButtonRegisterClass.class);
                 startActivity(intentreg);
             }
         });
