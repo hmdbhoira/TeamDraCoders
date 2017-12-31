@@ -2,16 +2,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/wall02"
+    >
 
     <Button
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="300px"
-        android:text="Button"
-        tools:ignore="InvalidId" />
+        android:layout_marginTop="80dp"
+        android:text="User"
+        tools:ignore="InvalidId"
+        android:textColor="#fff"
+        android:background="@drawable/choose"
+        />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Volunteer"
+        android:textColor="#fff"
+        android:background="@drawable/mybutton"/>
+
+    <Button
+        android:id="@+id/btn_temp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User (Temp)"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:padding="10px"
+        android:textColor="#fff"
+        android:background="@drawable/choose"
+        />
+
+    <Button
+        android:id="@+id/btn_temp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10px"
+        android:text="Volunteer (Temp)"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="#fff"
+        android:background="@drawable/mybutton"
+        />
 
 
 

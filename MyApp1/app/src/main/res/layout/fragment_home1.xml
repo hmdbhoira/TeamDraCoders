@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.myapp1.HomeFragment1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Home"
+            android:textSize="20dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="178dp"
+        android:layout_height="149dp"
+        android:src="@drawable/camera_temp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:text="This Camera Icon will allow user to click the pic of an Incident.\nDue to time constraint, this feature is not compiled in this apk. "
+        android:textStyle="italic"
+        />
+
+
+</FrameLayout>

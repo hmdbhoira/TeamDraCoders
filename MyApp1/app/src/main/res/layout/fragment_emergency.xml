@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.myapp1.EmergencyFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:text="This is Emergency Fragment" />
+
+    <Button
+        android:id="@+id/btn_emergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="120dp"
+        android:text="Emergency call"
+        android:padding="10px"
+        android:textColor="#fff"
+        android:background="@drawable/button_red"
+        />
+
+     <Button
+         android:id="@+id/btn_ambulance"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="200dp"
+         android:layout_marginLeft="135dp"
+         android:text="Ambulance"
+         android:padding="10px"
+         android:textColor="#fff"
+         android:background="@drawable/mybutton"
+         />
+
+     <Button
+         android:id="@+id/btn_police"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="140dp"
+         android:layout_marginTop="300dp"
+         android:text="Police"
+         android:padding="10px"
+         android:textColor="#fff"
+         android:background="@drawable/choose"
+         />
+    </RelativeLayout>
+
+</FrameLayout>
