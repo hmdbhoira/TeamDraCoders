@@ -2,19 +2,25 @@ package com.example.user.myapp1;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
  * Created by haveryahad on 12/21/2017.
  */
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
+
+    private TextView textViewShow;
+    private Button buttonChoose1;
 
     @Nullable
     @Override
@@ -28,12 +34,26 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setTitle("Home");
 
-        view.findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"This is Home Fragment!",Toast.LENGTH_SHORT).show();
-            }
-        });
+//        textViewShow = (TextView) view.findViewById(R.id.textViewShow1);
+        buttonChoose1 = (Button) view.findViewById(R.id.btn_incidents);
+
+        buttonChoose1.setOnClickListener(this);
+
+//        view.findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(getActivity(),"This is Home Fragment!",Toast.LENGTH_SHORT).show();
+//            }
+//        });
+    }
+
+
+    public void onClick(View view) {
+      if (view == buttonChoose1) {
+         // Toast.makeText(getActivity(),"Clicked!",Toast.LENGTH_SHORT).show();
+          startActivity(new Intent(getActivity(), ShowImagesActivity.class));
+
+        }
     }
 
 

@@ -2,42 +2,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.myapp1.HomeFragment1">
+    tools:context="com.example.user.myapp1.HomeFragment1"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Home"
-            android:textSize="20dp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:padding="20px"
+                android:text="Choose image of the incident"
+                android:background="@drawable/choose"
+                android:textColor="#fff"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="60dp"
+
+                />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:padding="10px"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="-180dp"
+                android:hint="Describe incident"
+                android:background="#fff"
+                />
+
+
+            <!--<Button-->
+                <!--android:id="@+id/buckysButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="80dp"-->
+                <!--android:layout_marginLeft="110dp"-->
+                <!--android:layout_marginRight="110dp"-->
+                <!--android:textColor="#fff"-->
+                <!--android:background="@drawable/choose"-->
+                <!--android:text="Take photo"-->
+                <!--android:layout_marginTop="40dp"-->
+
+                <!--tools:layout_editor_absoluteX="139dp"-->
+                <!--tools:layout_editor_absoluteY="371dp"-->
+                <!--android:layout_weight="0.21" />-->
+
+
+
+            <!--<Button-->
+                <!--android:id="@+id/btnUpload"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="#fff"-->
+                <!--android:text="Upload"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:onClick="uploadImage"/>-->
+
+
+        </LinearLayout>
+
+        <!--<ImageView-->
+            <!--android:id="@+id/buckysImageView"-->
+            <!--android:layout_width="231dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:maxWidth="500dp"-->
+            <!--android:minHeight="400dp"-->
+            <!--android:layoutDirection="inherit"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--tools:minHeight="155dp" />-->
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout"
+            android:maxHeight="150dp"
+
             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonUpload"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Send to volunteer"
+                android:layout_marginBottom="25dp"
+                android:textColor="#fff"
+                android:background="@drawable/mybutton"
+                android:layout_marginLeft="45dp"
+
+                />
+
+            <TextView
+                android:id="@+id/textViewShow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="View Uploads"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"
+                />
+        </LinearLayout>
 
     </RelativeLayout>
 
-    <ImageView
-        android:layout_width="178dp"
-        android:layout_height="149dp"
-        android:src="@drawable/camera_temp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="20dp"
-        android:text="This Camera Icon will allow user to click the pic of an Incident.\nDue to time constraint, this feature is not compiled in this apk. "
-        android:textStyle="italic"
-        />
 
 
 </FrameLayout>

@@ -41,9 +41,7 @@ import com.google.android.gms.common.api.Status;
  * Created by Hammad on 15-11-2017.
  */
 
-public class SignupClass extends AppCompatActivity implements
-        View.OnClickListener,
-        GoogleApiClient.OnConnectionFailedListener {
+public class SignupClass extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -69,18 +67,20 @@ public class SignupClass extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_layout);
 
-        /*Button logbtn = (Button) findViewById(R.id.signUpBtn);
+        Button logbtn = (Button) findViewById(R.id.signUpBtn);
+
         logbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intentlog = new Intent(SignupClass.this, MainActivity.class);
                 startActivity(intentlog);
             }
-        });*/
-        /*auth = FirebaseAuth.getInstance();
+        });
+        auth = FirebaseAuth.getInstance();
         btnSignUp = (Button) findViewById(R.id.signUpBtn);
         inputEmail = (EditText) findViewById(R.id.userEmailId);
         inputPassword = (EditText) findViewById(R.id.password);
+        progressBar=(ProgressBar) findViewById(R.id.progressBar);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,14 +104,14 @@ public class SignupClass extends AppCompatActivity implements
                     return;
                 }
 
-                *//*progressBar.setVisibility(View.VISIBLE);*//*
+               progressBar.setVisibility(View.VISIBLE);
                 //create user
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(SignupClass.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(SignupClass.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                *//*progressBar.setVisibility(View.GONE);*//*
+                                //Toast.makeText(SignupClass.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
@@ -119,36 +119,35 @@ public class SignupClass extends AppCompatActivity implements
                                     Toast.makeText(SignupClass.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Intent intentlog = new Intent(SignupClass.this, MainActivity.class);
+                                    Intent intentlog = new Intent(SignupClass.this, VolunteerActivity.class);
                                     startActivity(intentlog);
-                                    *//*Toast.makeText(SignupClass.this, "Registration Successful",Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(SignupClass.this, MainActivity.class));
-                                    finish();*//*
-                                    String child=inputEmail.getText().toString();
+                                    Toast.makeText(SignupClass.this, "Registration Successful",Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(SignupClass.this, VolunteerActivity.class));
+                                    finish();
+                                    //String child=inputEmail.getText().toString();
 
-                                    myRef=database.getReference("users").child(child);
-                                   *//* myRef.child("name").setValue(editTextname.getText().toString());*//*
+                                   /* myRef=database.getReference("users").child(child);
+                                    myRef.child("name").setValue(editTextname.getText().toString());
                                     myRef.child("email").setValue(inputEmail.getText().toString());
-                                    myRef.child("mobile no").setValue(inputPassword.getText().toString());
+                                    myRef.child("mobile no").setValue(inputPassword.getText().toString());*/
                                 }
                             }
                         });
 
             }
         });
-*/
-        btnSignIn = (Button) findViewById(R.id.signUpBtn);
-/*        btnSignOut = (Button) findViewById(R.id.btn_sign_out);
+        /*btnSignIn = (Button) findViewById(R.id.signUpBtn);
+*//*        btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         btnRevokeAccess = (Button) findViewById(R.id.btn_revoke_access);
         llProfileLayout = (LinearLayout) findViewById(R.id.llProfile);
-        imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic)*/
+        imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic)*//*
         ;
         txtName = (TextView) findViewById(R.id.fullName);
         txtEmail = (TextView) findViewById(R.id.userEmailId);
 
         btnSignIn.setOnClickListener((View.OnClickListener) this);
-        /*btnSignOut.setOnClickListener(this);
-        btnRevokeAccess.setOnClickListener(this);*/
+        *//*btnSignOut.setOnClickListener(this);
+        btnRevokeAccess.setOnClickListener(this);*//*
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -160,8 +159,8 @@ public class SignupClass extends AppCompatActivity implements
                 .build();
 
         // Customizing G+ button
-        /*btnSignIn.setSize(SignInButton.SIZE_STANDARD);
-        btnSignIn.setScopes(gso.getScopeArray());*/
+        *//*btnSignIn.setSize(SignInButton.SIZE_STANDARD);
+        btnSignIn.setScopes(gso.getScopeArray());*//*
     }
 
 
@@ -208,11 +207,11 @@ public class SignupClass extends AppCompatActivity implements
 
             txtName.setText(personName);
             txtEmail.setText(email);
-            /*Glide.with(getApplicationContext()).load(personPhotoUrl)
+            *//*Glide.with(getApplicationContext()).load(personPhotoUrl)
                     .thumbnail(0.5f)
                     .crossFade()
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .into(imgProfilePic);*/
+                    .into(imgProfilePic);*//*
 
             updateUI(true);
         } else {
@@ -230,13 +229,13 @@ public class SignupClass extends AppCompatActivity implements
                 signIn();
                 break;
 
-            /*case R.id.btn_sign_out:
+            *//*case R.id.btn_sign_out:
                 signOut();
                 break;
 
             case R.id.btn_revoke_access:
                 revokeAccess();
-                break;*/
+                break;*//*
         }
     }
 
@@ -288,14 +287,14 @@ public class SignupClass extends AppCompatActivity implements
     private void updateUI(boolean isSignedIn) {
         if (isSignedIn) {
             btnSignIn.setVisibility(View.GONE);
-            /*btnSignOut.setVisibility(View.VISIBLE);
+            *//*btnSignOut.setVisibility(View.VISIBLE);
             btnRevokeAccess.setVisibility(View.VISIBLE);
-            llProfileLayout.setVisibility(View.VISIBLE);*/
+            llProfileLayout.setVisibility(View.VISIBLE);*//*
         } else {
             btnSignIn.setVisibility(View.VISIBLE);
-            /*btnSignOut.setVisibility(View.GONE);
+            *//*btnSignOut.setVisibility(View.GONE);
             btnRevokeAccess.setVisibility(View.GONE);
-            llProfileLayout.setVisibility(View.GONE);*/
+            llProfileLayout.setVisibility(View.GONE);*//*
         }
 
 
@@ -310,7 +309,9 @@ public class SignupClass extends AppCompatActivity implements
                 Intent intentfgt = new Intent(SignupClass.this, LoginClass.class);
                 startActivity(intentfgt);
             }
-        });
+        });*/
     }
+
+
 
 }

@@ -51,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
         myRef.setValue("Hello, World!");
 
-        Button btn1 = (Button) findViewById(R.id.btn1);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentlog = new Intent(MainActivity.this, LoginClass.class);
-                startActivity(intentlog);
-            }
-        });
+//        Button btn1 = (Button) findViewById(R.id.btn1);
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intentlog = new Intent(MainActivity.this, LoginClass.class);
+//                startActivity(intentlog);
+//            }
+//        });
 
 
         Button btn2 = (Button) findViewById(R.id.btn2);

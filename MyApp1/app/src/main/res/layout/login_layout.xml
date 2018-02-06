@@ -96,9 +96,18 @@
         android:paddingBottom="5dp"
         android:paddingTop="8dp" >
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp"
+            android:visibility="gone"
+            />
+
         <TextView
             android:id="@+id/forgot_password"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="end"
@@ -106,6 +115,9 @@
             android:text="@string/forgot"
             android:textColor="@color/white"
             android:textSize="14sp" />
+
+
+
     </LinearLayout>
 
     <Button

@@ -2,12 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.myapp1.EmergencyFragment">
+    tools:context="com.example.user.myapp1.EmergencyFragment"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         >
 
     <TextView
@@ -24,7 +26,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginLeft="120dp"
         android:text="Emergency call"
-        android:padding="10px"
+        android:padding="15px"
         android:textColor="#fff"
         android:background="@drawable/button_red"
         />
@@ -36,7 +38,7 @@
          android:layout_marginTop="200dp"
          android:layout_marginLeft="135dp"
          android:text="Ambulance"
-         android:padding="10px"
+         android:padding="15px"
          android:textColor="#fff"
          android:background="@drawable/mybutton"
          />

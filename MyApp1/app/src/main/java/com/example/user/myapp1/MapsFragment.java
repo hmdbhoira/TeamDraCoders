@@ -1,6 +1,6 @@
 package com.example.user.myapp1;
 
-import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -29,7 +29,8 @@ public class MapsFragment extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "A Map will be displayed \nwith the Place Picker at \nthe time of an Emergency.",Toast.LENGTH_LONG).show();
-
+                Intent intent = new Intent(getActivity(),Place1Picker.class);
+                startActivity(intent);
                 
 
             }

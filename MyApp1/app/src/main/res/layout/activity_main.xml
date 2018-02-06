@@ -6,25 +6,26 @@
     android:background="@drawable/wall02"
     >
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:text="User"
-        tools:ignore="InvalidId"
-        android:textColor="#fff"
-        android:background="@drawable/choose"
-        />
+    <!--<Button-->
+        <!--android:id="@+id/btn1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="80dp"-->
+        <!--android:text="User"-->
+        <!--tools:ignore="InvalidId"-->
+        <!--android:textColor="#fff"-->
+        <!--android:background="@drawable/choose"-->
+        <!--/>-->
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="Volunteer"
+        android:layout_marginTop="80dp"
+        android:text="Login Page"
+        android:padding="20px"
         android:textColor="#fff"
         android:background="@drawable/mybutton"/>
 
@@ -34,8 +35,8 @@
         android:layout_height="wrap_content"
         android:text="User (Temp)"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:padding="10px"
+        android:layout_marginTop="100dp"
+        android:padding="20px"
         android:textColor="#fff"
         android:background="@drawable/choose"
         />
@@ -44,12 +45,12 @@
         android:id="@+id/btn_temp2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10px"
+        android:padding="20px"
         android:text="Volunteer (Temp)"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:textColor="#fff"
-        android:background="@drawable/mybutton"
+        android:background="@drawable/choose"
         />
 
 
