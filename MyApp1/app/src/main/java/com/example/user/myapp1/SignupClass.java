@@ -9,15 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import android.app.ProgressDialog;
-import android.util.Log;
-
-
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -27,16 +24,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 /*import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;*/
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.OptionalPendingResult;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 /**
  * Created by Hammad on 15-11-2017.
  */
@@ -54,13 +41,13 @@ public class SignupClass extends AppCompatActivity {
 
     private GoogleApiClient mGoogleApiClient;
 
-    private EditText inputEmail, inputPassword;
+    private EditText inputEmail, inputPassword,fullname,mobileNumber;
     private TextView txtName, txtEmail;
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
-//    FirebaseDatabase database = FirebaseDatabase.getInstance();
-//    DatabaseReference myRef = database.getReference("Succesful");
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +67,8 @@ public class SignupClass extends AppCompatActivity {
         btnSignUp = (Button) findViewById(R.id.signUpBtn);
         inputEmail = (EditText) findViewById(R.id.userEmailId);
         inputPassword = (EditText) findViewById(R.id.password);
+        fullname=(EditText) findViewById(R.id.fullName);
+        mobileNumber=(EditText) findViewById(R.id.mobileNumber);
         progressBar=(ProgressBar) findViewById(R.id.progressBar);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +110,13 @@ public class SignupClass extends AppCompatActivity {
                                 } else {
                                     Intent intentlog = new Intent(SignupClass.this, VolunteerActivity.class);
                                     startActivity(intentlog);
+                                    myRef=database.getReference("Volunteers").push();
+                                    myRef.child("Name").setValue(fullname.getText().toString());
+                                    myRef.child("Email").setValue(inputEmail.getText().toString());
+                                    myRef.child("Password").setValue(inputPassword.getText().toString());
+                                    myRef.child("MobileNo").setValue(mobileNumber.getText().toString());
+
+                                    //myRef.child("Password").setValue(inputPassword.getText().toString());
                                     Toast.makeText(SignupClass.this, "Registration Successful",Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(SignupClass.this, VolunteerActivity.class));
                                     finish();
