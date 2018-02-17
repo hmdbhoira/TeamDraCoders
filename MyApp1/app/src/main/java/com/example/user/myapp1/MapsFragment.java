@@ -75,7 +75,7 @@ public class MapsFragment extends android.support.v4.app.Fragment implements OnM
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(getActivity());
+        //mapFragment.getMapAsync(getActivity());
 
 
     }
