@@ -15,6 +15,7 @@ public class ButtonRegisterClass extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.button_register);
+        setTitle("Register");
 
         Button logbtn = (Button) findViewById(R.id.VolBtn);
         logbtn.setOnClickListener(new View.OnClickListener() {

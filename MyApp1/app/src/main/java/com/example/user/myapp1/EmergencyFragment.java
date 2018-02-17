@@ -4,14 +4,17 @@ package com.example.user.myapp1;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 
 /**
@@ -44,7 +47,7 @@ public class EmergencyFragment extends Fragment {
             public void onClick (View v) {
 
 
-                String number = "9867270289";
+                String number = "9870016163";
                 Uri number1 = Uri.parse("tel:" + number);
                 Intent dial = new Intent(Intent.ACTION_CALL);
                 dial.setData(number1);
@@ -108,6 +111,48 @@ public class EmergencyFragment extends Fragment {
                 startActivity(dial);
             }
         });
-}
+
+        final MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.beep);
+
+        view.findViewById(R.id.btn_sos).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                if(mp.isPlaying())
+                    mp.pause();
+                else
+                    mp.start();
+            }
+        });
+
+        view.findViewById(R.id.btn_sos).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(mp.isPlaying())
+                    mp.pause();
+                else
+                    mp.start();
+
+                String msg = "An Incident has Occured, Please find the Location via the notification I have sent.";
+                try {
+                    SmsManager sms = SmsManager.getDefault();
+
+                    String numbers[] = {"9820952523", "9870016163", "8454902075"};
+
+                    for(String number : numbers) {
+                        sms.sendTextMessage(number, null, msg, null, null);
+                    }
+                        Toast.makeText(getActivity(), "Sms Sent", Toast.LENGTH_LONG).show();
+
+                } catch (Exception e) {
+                    Toast.makeText(getActivity(), "Sending Failed", Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+    }
 
 }

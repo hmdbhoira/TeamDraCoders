@@ -52,5 +52,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_place_picker">PlacePicker</string>
 
+    !-- Twitter Configurations -->
+    <string name="twitter_callback">http://deepblue.co.in/</string>
+    <string name="twitter_consumer_key">4EojSfiqFantr8DDQyy63zCMD</string>
+    <string name="twitter_consumer_secret">WXhsnQseTFOH6I16QXzqHViErAUihYJ8bH7p0sFNDbdp5mBiPv</string>
+    <string name="twitter_oauth_verifier">oauth_verifier</string>
+    <string name="twitter_callback_url">http://placeholder.com</string>
+    <!-- End Configurations -->
+
+
 
 </resources>

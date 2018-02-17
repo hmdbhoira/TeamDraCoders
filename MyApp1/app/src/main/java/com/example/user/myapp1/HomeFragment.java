@@ -1,7 +1,5 @@
 package com.example.user.myapp1;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by haveryahad on 12/21/2017.
@@ -21,6 +18,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private TextView textViewShow;
     private Button buttonChoose1;
+    private Button VolUser;
 
     @Nullable
     @Override
@@ -36,8 +34,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
 //        textViewShow = (TextView) view.findViewById(R.id.textViewShow1);
         buttonChoose1 = (Button) view.findViewById(R.id.btn_incidents);
+        VolUser = (Button) view.findViewById(R.id.volUser);
 
         buttonChoose1.setOnClickListener(this);
+        VolUser.setOnClickListener(this);
 
 //        view.findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -53,6 +53,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
          // Toast.makeText(getActivity(),"Clicked!",Toast.LENGTH_SHORT).show();
           startActivity(new Intent(getActivity(), ShowImagesActivity.class));
 
+        }
+
+        if (view == VolUser) {
+          startActivity(new Intent(getActivity(),UserActivity.class));
         }
     }
 

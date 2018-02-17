@@ -2,14 +2,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:bitmap="http://schemas.android.com/tools">
+    xmlns:bitmap="http://schemas.android.com/tools"
+    android:background="@drawable/bg">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="200dp"
         xmlns:app="http://schemas.android.com/apk/lib-auto"
         android:orientation="vertical"
-        android:background="@drawable/wall03"
+        android:background="@drawable/bg"
         android:padding="20dp">
 
         <TextView
@@ -26,18 +27,19 @@
             android:id="@+id/input_layout_fullname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <EditText
                 android:id="@+id/fullName"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                android:drawableStart="@drawable/user"
-                android:drawableLeft="@drawable/user"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/ic_person_black_24dp"
                 android:gravity="center_vertical"
                 android:hint="@string/fullName"
                 android:inputType="textCapWords"
                 android:padding="5dp"
-                android:drawablePadding="5dp"
                 android:singleLine="true"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"

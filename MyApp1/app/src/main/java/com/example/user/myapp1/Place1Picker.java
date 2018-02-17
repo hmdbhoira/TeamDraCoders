@@ -70,7 +70,7 @@ public class Place1Picker extends AppCompatActivity implements GoogleApiClient.O
 
     private void initViews() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       // setSupportActionBar(toolbar);
         fabPickPlace = (FloatingActionButton) findViewById(R.id.fab);
         tvPlaceDetails = (TextView) findViewById(R.id.placeDetails);
     }

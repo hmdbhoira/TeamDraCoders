@@ -53,6 +53,7 @@ public class SignUpPublicClass extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_layout);
+        setTitle("SignUp");
 
         Button logbtn = (Button) findViewById(R.id.signUpBtn);
 

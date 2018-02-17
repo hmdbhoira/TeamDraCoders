@@ -6,8 +6,13 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -16,13 +21,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+                  android:theme="@style/AppTheme"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".TwitterClass"
+            android:label="Twitter"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="t4jsample"
+                    android:scheme="oauth" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WebViewActivity"
+            android:label="WebViewActivity"
+            android:theme="@style/AppTheme" />
         <activity android:name=".ShowImagesActivity" />
         <activity
             android:name=".SignupClass"
@@ -35,7 +63,7 @@
         <activity
             android:name=".LoginClass"
             android:label="Login"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".VolunteerActivity"
             android:label="@string/title_activity_volunteer"
@@ -58,11 +86,12 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD6Xl7-oqcN-WItJGcnRkmKbcahajFYoYA" />
+            android:value="AIzaSyCTpJkLHRgwJNB-nN5Fm2HilUS-BhfUBR8" />
+
 
         <activity
             android:name=".Place1Picker"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/AppTheme"
         />
     </application>
 

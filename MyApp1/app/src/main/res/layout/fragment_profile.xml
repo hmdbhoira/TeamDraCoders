@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,40 +8,56 @@
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
+        android:layout_height="match_parent">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="80dp"
-            android:text="User Profile"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="30dp"
-
-            />
-
-        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/people"
-            android:layout_marginLeft="100dp"
+            android:text="Phone Number :"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="100dp"
-            />
-        <TextView
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/et1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="270dp"
-            android:layout_marginLeft="30dp"
-            android:text="User Information will be displayed here.\nIncluding Name, Contact, Address, Aadhar Number, etc."
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:textStyle="italic"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="155dp"
+            android:hint="Enter your Phone Number"
+            android:textSize="20sp"
+            android:layout_gravity="center"
             />
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Message"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:layout_marginTop="180dp"
+            />
+
+            <Button
+                android:id="@+id/bt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="270dp"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                />
+            <!--<Button-->
+                <!--android:id="@+id/bt2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Call"-->
+                <!--android:textSize="20sp"-->
+                <!--android:backgroundTint="#999"-->
+                <!--android:layout_gravity="center"/>-->
 
 
     </RelativeLayout>
 
-</FrameLayout>
+</LinearLayout>

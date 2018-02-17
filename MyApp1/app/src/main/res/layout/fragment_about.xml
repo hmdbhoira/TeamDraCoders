@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.myapp1.AboutFragment">
+    tools:context="com.example.user.myapp1.AboutFragment"
+    android:background="@drawable/bg">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout

@@ -3,23 +3,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:label="Home Screen"
+    android:background="@drawable/bg1"
 
     >
 
 
+
     <Button
         android:id="@+id/btn_incidents"
+        android:layout_width="128dp"
+        android:layout_height="173dp"
+        android:background="@drawable/view_incidents"
+        android:layout_marginTop="73dp"
+        android:layout_marginLeft="150dp"
+        />
+
+    <Button
+        android:id="@+id/volUser"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginLeft="-155dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/self_emergency"
+        android:padding="20px"
+        android:textColor="#fff" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Incidents"
-        android:textAlignment="center"
-        android:textColor="#fff"
+        android:text="  SELF EMERGENCY"
         android:textStyle="bold"
-        android:textSize="13sp"
-        android:padding="20px"
-        android:background="@drawable/mybutton"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="125dp"
+        android:layout_marginLeft="-150dp"
+        android:layout_marginTop="250dp"
         />
 
 

@@ -8,131 +8,123 @@
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_alignEnd="@+id/buttonCapture"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp"
+            android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/buttonChoose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="13sp"
-                android:padding="20px"
-                android:text="Choose image of the incident"
-                android:background="@drawable/choose"
-                android:textColor="#fff"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="60dp"
+        <Button
+            android:id="@+id/buttonCapture"
+            android:layout_width="222dp"
+            android:layout_height="65dp"
 
-                />
+            android:layout_alignStart="@+id/fab"
+            android:layout_below="@+id/user_name"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="-230dp"
+            android:background="@drawable/capture_incident"
+            android:padding="20px"
+            android:textColor="#fff"
+            android:textSize="13sp" />
 
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:padding="10px"
-                android:layout_marginTop="55dp"
-                android:layout_marginLeft="-180dp"
-                android:hint="Describe incident"
-                android:background="#fff"
-                />
+        <ImageView
+            android:id="@+id/twitter_imgvw"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/buttonCapture"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="350dp"
+            android:src="@drawable/twitter"
+            android:visibility="visible" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Describe Incident :"
+            android:layout_marginTop="145dp"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:layout_marginLeft="4dp"
+            />
 
-            <!--<Button-->
-                <!--android:id="@+id/buckysButton"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_marginBottom="80dp"-->
-                <!--android:layout_marginLeft="110dp"-->
-                <!--android:layout_marginRight="110dp"-->
-                <!--android:textColor="#fff"-->
-                <!--android:background="@drawable/choose"-->
-                <!--android:text="Take photo"-->
-                <!--android:layout_marginTop="40dp"-->
-
-                <!--tools:layout_editor_absoluteX="139dp"-->
-                <!--tools:layout_editor_absoluteY="371dp"-->
-                <!--android:layout_weight="0.21" />-->
-
-
-
-            <!--<Button-->
-                <!--android:id="@+id/btnUpload"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:textColor="#fff"-->
-                <!--android:text="Upload"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:onClick="uploadImage"/>-->
-
-
-        </LinearLayout>
-
-        <!--<ImageView-->
-            <!--android:id="@+id/buckysImageView"-->
-            <!--android:layout_width="231dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:maxWidth="500dp"-->
-            <!--android:minHeight="400dp"-->
-            <!--android:layoutDirection="inherit"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--tools:minHeight="155dp" />-->
-
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/buttonCapture"
+            android:layout_marginTop="10dp"
+            android:layout_alignEnd="@+id/buttonCapture"
+            android:background="#fff"
+            android:hint="Describe incident"
+            android:textStyle="bold"
+            android:padding="10px"
+            android:text="#GHR9 " />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/linearLayout"
-            android:maxHeight="150dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="195dp" />
 
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/locview"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="vertical">
+            android:layout_below="@+id/imageView"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="24dp"
+            android:textColor="#000000"
+            android:hint="Click Map Button to get Location"
+            android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/buttonUpload"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:text="Send to volunteer"
-                android:layout_marginBottom="25dp"
-                android:textColor="#fff"
-                android:background="@drawable/mybutton"
-                android:layout_marginLeft="45dp"
+        <Button
+            android:id="@+id/buttonUpload"
+            android:layout_width="294dp"
+            android:layout_height="66dp"
 
-                />
+            android:layout_below="@+id/fab"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:layout_weight="1"
 
-            <TextView
-                android:id="@+id/textViewShow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="View Uploads"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:layout_marginBottom="20dp"
-                />
-        </LinearLayout>
+            android:background="@drawable/sendtovolunteer"
+            android:padding="10dp"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/fab"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/locview"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="320dp"
+            android:background="@drawable/sendmap"
+
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/textViewShow"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="10dp"-->
+        <!--android:text="View Uploads"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@color/colorPrimary"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--/>-->
 
     </RelativeLayout>
-
 
 
 </FrameLayout>

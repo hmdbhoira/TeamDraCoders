@@ -22,7 +22,7 @@ public class ShareFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Share");
+        getActivity().setTitle("User");
 
         view.findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
             @Override
