@@ -50,6 +50,8 @@ public class ShowImagesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_images);
 
+        setTitle("Incident Images");
+
 
         TextView imgloc= (TextView) findViewById(R.id.imgloc);
 

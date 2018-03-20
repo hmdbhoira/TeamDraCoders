@@ -58,8 +58,8 @@
     <string name="twitter_consumer_secret">WXhsnQseTFOH6I16QXzqHViErAUihYJ8bH7p0sFNDbdp5mBiPv</string>
     <string name="twitter_oauth_verifier">oauth_verifier</string>
     <string name="twitter_callback_url">http://placeholder.com</string>
+    <string name="title_activity_youtube">Youtube</string>
     <!-- End Configurations -->
-
 
 
 </resources>

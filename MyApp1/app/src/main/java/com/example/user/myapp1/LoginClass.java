@@ -52,7 +52,7 @@ public class LoginClass extends AppCompatActivity {
         if(hasLoggedIn)
         {
             //Go directly to main activity.
-            Intent intent = new Intent(LoginClass.this, MainActivity.class);
+            Intent intent = new Intent(LoginClass.this, HomeFragment1.class);
             startActivity(intent);
             LoginClass.this.finish();
 

@@ -3,14 +3,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:bitmap="http://schemas.android.com/tools"
-    android:background="@drawable/bg">
+    >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="200dp"
         xmlns:app="http://schemas.android.com/apk/lib-auto"
         android:orientation="vertical"
-        android:background="@drawable/bg"
+        android:background="@drawable/bg1"
         android:padding="20dp">
 
         <TextView

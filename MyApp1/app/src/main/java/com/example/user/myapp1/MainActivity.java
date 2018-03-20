@@ -2,9 +2,11 @@ package com.example.user.myapp1;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.Bundle;
 import android.support.multidex.MultiDex;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -26,6 +28,18 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Golden Hour Response - 9");
 
 
+//        ActionBar actionBar;
+//        actionBar = getSupportActionBar();
+//        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+//        // TODO: Remove the redundant calls to getSupportActionBar()
+//        //       and use variable actionBar instead
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeButtonEnabled(true);
+
+
+
+
+
         Button user_btn;
 
             user_btn = (Button) findViewById(R.id.btn_temp1);
@@ -45,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+
+
 
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -75,4 +91,25 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        if(keyCode==KeyEvent.KEYCODE_VOLUME_UP){
+            event.startTracking();
+            return true;
+        }
+        return super.onKeyDown(keyCode,event);
+    }
+    @Override
+    public boolean onKeyLongPress(int keyCode,KeyEvent event){
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.beep);
+        if(keyCode== KeyEvent.KEYCODE_VOLUME_UP){
+            mp.start();
+//            Toast.makeText(this,"Volume Up triggered on Long Press", Toast.LENGTH_SHORT).show();
+
+            return true;
+        }
+        return onKeyLongPress(keyCode,event);
+    }
+
 }

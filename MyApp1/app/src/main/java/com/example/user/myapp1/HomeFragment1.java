@@ -296,7 +296,7 @@ public class HomeFragment1 extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Notification.Builder noti = new Notification.Builder(getActivity());
+                Notification.Builder noti = new Notification.Builder(getContext());
                 Intent notificationIntent = new Intent(getActivity(), ShowImagesActivity.class);
                 PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, notificationIntent, 0);
 
@@ -492,6 +492,8 @@ public class HomeFragment1 extends Fragment {
                             Snackbar.make(getView(), "File Sent", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
 
+
+
                             @SuppressWarnings("VisibleForTests") Uri downloadUrl = taskSnapshot.getDownloadUrl();
                             //creating the upload object to store uploaded image details
                           // Upload upload = new Upload(editTextName.getText().toString().trim(),downloadUrl.toString());
@@ -504,8 +506,13 @@ public class HomeFragment1 extends Fragment {
                             mDatabase.child(uploadId).setValue(upload);
 
 
+                            Intent intent = new Intent(getActivity(),Youtube.class);
+                            startActivity(intent);
+
                         }
+
                     })
+
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception exception) {

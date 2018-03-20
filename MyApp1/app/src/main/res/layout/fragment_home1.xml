@@ -1,130 +1,120 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.user.myapp1.HomeFragment1"
     >
 
-    <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/buttonCapture"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="9dp"
-            android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
 
-        <Button
-            android:id="@+id/buttonCapture"
-            android:layout_width="222dp"
-            android:layout_height="65dp"
+            android:layout_height="match_parent">
 
-            android:layout_alignStart="@+id/fab"
-            android:layout_below="@+id/user_name"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="-230dp"
-            android:background="@drawable/capture_incident"
-            android:padding="20px"
-            android:textColor="#fff"
-            android:textSize="13sp" />
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/buttonCapture"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="9dp"
+                android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/twitter_imgvw"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignTop="@+id/buttonCapture"
-            android:layout_marginTop="11dp"
-            android:layout_marginLeft="350dp"
-            android:src="@drawable/twitter"
-            android:visibility="visible" />
+            <Button
+                android:id="@+id/buttonCapture"
+                android:layout_width="222dp"
+                android:layout_height="65dp"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Describe Incident :"
-            android:layout_marginTop="145dp"
-            android:textStyle="bold"
-            android:textSize="19sp"
-            android:layout_marginLeft="4dp"
-            />
+                android:layout_alignStart="@+id/fab"
+                android:layout_below="@+id/user_name"
+                android:layout_marginLeft="-230dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/capture_incident"
+                android:padding="20px"
+                android:textColor="#fff"
+                android:textSize="13sp" />
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_below="@+id/buttonCapture"
-            android:layout_marginTop="10dp"
-            android:layout_alignEnd="@+id/buttonCapture"
-            android:background="#fff"
-            android:hint="Describe incident"
-            android:textStyle="bold"
-            android:padding="10px"
-            android:text="#GHR9 " />
+            <ImageView
+                android:id="@+id/twitter_imgvw"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/buttonCapture"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="11dp"
+                android:src="@drawable/twitter"
+                android:visibility="visible" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="195dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="145dp"
+                android:text="Describe Incident :"
+                android:textSize="19sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/locview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="24dp"
-            android:textColor="#000000"
-            android:hint="Click Map Button to get Location"
-            android:textStyle="bold" />
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignEnd="@+id/buttonCapture"
+                android:layout_below="@+id/buttonCapture"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:hint="Describe incident"
+                android:padding="10px"
+                android:text="#GHR9 "
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/buttonUpload"
-            android:layout_width="294dp"
-            android:layout_height="66dp"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="195dp" />
 
-            android:layout_below="@+id/fab"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="19dp"
-            android:layout_weight="1"
+            <TextView
+                android:id="@+id/locview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="24dp"
+                android:hint="Click Map Button to get Location"
+                android:textColor="#000000"
+                android:textStyle="bold" />
 
-            android:background="@drawable/sendtovolunteer"
-            android:padding="10dp"
-            android:textColor="#fff" />
+            <Button
+                android:id="@+id/buttonUpload"
+                android:layout_width="294dp"
+                android:layout_height="66dp"
 
-        <Button
-            android:id="@+id/fab"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignBottom="@+id/locview"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="320dp"
-            android:background="@drawable/sendmap"
+                android:layout_below="@+id/fab"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="19dp"
+                android:layout_weight="1"
 
-            tools:ignore="VectorDrawableCompat" />
+                android:background="@drawable/sendtovolunteer"
+                android:padding="10dp"
+                android:textColor="#fff" />
 
+            <Button
+                android:id="@+id/fab"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@+id/locview"
+                android:layout_marginLeft="320dp"
+                android:background="@drawable/sendmap"
 
-        <!--<TextView-->
-        <!--android:id="@+id/textViewShow"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:padding="10dp"-->
-        <!--android:text="View Uploads"-->
-        <!--android:textAlignment="center"-->
-        <!--android:textColor="@color/colorPrimary"-->
-        <!--android:textStyle="bold"-->
-        <!--android:layout_marginBottom="20dp"-->
-        <!--/>-->
-
-    </RelativeLayout>
+                tools:ignore="VectorDrawableCompat" />
 
 
-</FrameLayout>
+        </RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
